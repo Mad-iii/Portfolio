@@ -62,7 +62,7 @@ export default function CloudWatchForm() {
         
           <div className="relative w-64 h-36">
             <img
-              src="https://res.cloudinary.com/dyuhg1o8v/image/upload/v1777130453/Untitled_design_nky4rs.png"
+              src="/img/cat.png"         
               alt="cat character"
               className="w-full h-full object-contain mix-blend-multiply"
             />
