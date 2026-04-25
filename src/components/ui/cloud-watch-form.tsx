@@ -62,7 +62,7 @@ export default function CloudWatchForm() {
         
           <div className="relative w-64 h-36">
             <img
-              src="./img/cat.png"
+              src="/img/cat.png"
               alt="cat character"
               className="w-full h-full object-contain mix-blend-multiply"
             />
