@@ -61,9 +61,8 @@ export default function CloudWatchForm() {
       <div className="bg-white/10 dark:bg-zinc-900/30 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col items-center gap-6 w-full max-w-md border border-white/20">
         
           <div className="relative w-64 h-36">
-            import catImg from "../../../img/cat.png";
             <img
-              src={catImg.src}              
+              src="./img/cat.png"
               alt="cat character"
               className="w-full h-full object-contain mix-blend-multiply"
             />
