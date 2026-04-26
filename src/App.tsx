@@ -27,11 +27,12 @@ import { WavePath } from "./components/ui/wave-path";
 import { ZoomParallax } from "./components/ui/zoom-parallax";
 import RadialOrbitalTimeline from "./components/ui/radial-orbital-timeline";
 import CloudWatchForm from "./components/ui/cloud-watch-form";
+import { InteractivePythonEditor } from "./components/ui/interactive-python-editor";
 import { Footer } from "./components/ui/footer";
 import { Card, CardContent } from "./components/ui/card";
 import { Badge } from "./components/ui/badge";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, FileText, Download } from "lucide-react";
 
 export default function App() {
   return (
@@ -83,22 +84,7 @@ function AppContent() {
               </motion.div>
             }
           >
-            <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80')] bg-cover bg-center rounded-2xl relative overflow-hidden group">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                     <div className="p-8 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl max-w-md">
-                        <p className="text-white font-mono text-sm leading-relaxed">
-                            {"// Mahd Sadiq's Tech Stack"} <br/>
-                            const profile = {"{"} <br/>
-                            &nbsp;&nbsp;focus: "Agentic AI & Web", <br/>
-                            &nbsp;&nbsp;university: "FAST-NUCES", <br/>
-                            &nbsp;&nbsp;location: "Faisalabad", <br/>
-                            &nbsp;&nbsp;passion: ["Coding", "UI/UX", "ML"] <br/>
-                            {"};"}
-                        </p>
-                     </div>
-                </div>
-            </div>
+            <InteractivePythonEditor />
           </ContainerScroll>
         </section>
 
@@ -281,6 +267,45 @@ function AppContent() {
                         </Card>
                     ))}
                 </div>
+            </div>
+        </section>
+
+        <div className="flex justify-center py-20 overflow-hidden">
+            <WavePath />
+        </div>
+
+        {/* Resume Section */}
+        <section id="resume" className="py-24 px-6 relative overflow-hidden">
+            <div className="absolute inset-0 bg-zinc-900/5 dark:bg-white/5 skew-y-3 translate-y-12 scale-110 pointer-events-none" />
+            
+            <div className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center gap-6"
+                >
+                    <div className="h-16 w-16 bg-indigo-500/10 rounded-3xl flex items-center justify-center mb-4">
+                        <FileText className="h-8 w-8 text-indigo-500" />
+                    </div>
+                    <h3 className="text-sm uppercase tracking-[0.4em] font-bold text-indigo-500">Resource</h3>
+                    <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-zinc-900 dark:text-white leading-none">
+                        Ready to dive deeper?
+                    </h2>
+                    <p className="max-w-2xl text-zinc-500 dark:text-zinc-400 font-medium text-lg leading-relaxed mt-4">
+                        Download my full resume to see a detailed breakdown of my experience, 
+                        honors, and technical contributions in the field of Artificial Intelligence.
+                    </p>
+                    
+                    <div className="mt-12">
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <GlassButton size="lg" className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:scale-105 transition-transform" contentClassName="flex items-center gap-3 px-8">
+                                <Download className="h-5 w-5" />
+                                <span className="font-black uppercase tracking-widest text-base">Download Resume</span>
+                            </GlassButton>
+                        </a>
+                    </div>
+                </motion.div>
             </div>
         </section>
 

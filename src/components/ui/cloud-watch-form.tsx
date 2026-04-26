@@ -64,7 +64,7 @@ export default function CloudWatchForm() {
             <img
               src="/img/cat.png"
               alt="cat character"
-              className="w-full h-full object-contain mix-blend-multiply"
+              className="w-full h-full object-contain"
             />
 
             {["left", "right"].map((side, idx) => (
